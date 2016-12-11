@@ -9,15 +9,21 @@ import { VideolistService } from '../videolist.service';
 export class VideolistComponent implements OnInit {
 
   videolistArray : any;
+  private searchQuery : string;
 
-  search()
+  search(event)
     {
+        this.videoservice.getVideos(event.target.value)
+        .subscribe((videos) => {
+            this.videolistArray = videos.items;
+        });
     }
 
   constructor( private videoservice : VideolistService  ) { }
 
   ngOnInit() {
-      this.videoservice.getVideos()
+      this.searchQuery = "casey neistat";
+      this.videoservice.getVideos(this.searchQuery)
       .subscribe((videos) => {
           this.videolistArray = videos.items;
       });

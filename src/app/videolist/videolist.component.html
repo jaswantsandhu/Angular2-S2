@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-12">
-    <input (change)="search()" name="search"/>
+    <input (change)="search($event)" name="search" [value]="searchQuery" />
   </div>
 </div>
 

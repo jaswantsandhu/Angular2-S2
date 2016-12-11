@@ -12,12 +12,13 @@ export class VideolistService {
 
      constructor (private http: Http) {}
      private videoURL = 'https://www.googleapis.com/youtube/v3/search';
-     getVideos() {
+     
+     getVideos(search) {
 
         let params: URLSearchParams = new URLSearchParams();
         params.set("part", "snippet");
-        params.set("key", "");
-        params.set("q", "javascript");
+        params.set("key", "AIzaSyC7Lzx7d_0FqwA7Xa-BXd7RkvTRlQb_gLs");
+        params.set("q", search);
         params.set("type", "video");
 
          return this.http.get(this.videoURL, { search : params })

@@ -8,7 +8,6 @@ import { VideoplayerComponent } from './videoplayer/videoplayer.component';
 
 import { Routes, RouterModule } from '@angular/router';
 import { VideolistComponent } from './videolist/videolist.component';
-
 import { VideolistService } from "./videolist.service";
 
 const routes: Routes = [
