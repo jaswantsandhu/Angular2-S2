@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-12">
+    <input (change)="search()" name="search"/>
+  </div>
+</div>
+
+<div class="videoInfo" *ngFor="let video of videolistArray;">
+  <h3>
+    <a routerLink="/video/{{video.id.videoId}}">{{video.snippet.title}}</a>
+  </h3>
+  <p>{{video.snippet.description}}</p>
+  <hr/>
+</div>
+

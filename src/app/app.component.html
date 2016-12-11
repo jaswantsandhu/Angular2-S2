@@ -2,9 +2,15 @@
   <div class="jumbotron">
     <h1>YT Search</h1> 
     <p>Youtube search made easy.</p> 
+    <a routerLink="/video">Videos</a>
   </div>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-6">
+
+      <app-videolist></app-videolist>
+      
+    </div>
+    <div class="col-md-6">
       <router-outlet></router-outlet>
     </div>
   </div>
