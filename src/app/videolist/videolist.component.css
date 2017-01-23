@@ -1,0 +1,16 @@
+.example-card {
+    width: 23%;
+    float: left;
+    margin: 1%;
+    height: 500px
+}
+
+.example-header-image {
+    background-image: url('assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+p {
+    font-size: 12px;
+    word-wrap: break-word
+}

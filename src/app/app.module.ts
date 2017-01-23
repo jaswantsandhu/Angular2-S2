@@ -9,6 +9,8 @@ import { VideoplayerComponent } from './videoplayer/videoplayer.component';
 import { Routes, RouterModule } from '@angular/router';
 import { VideolistComponent } from './videolist/videolist.component';
 import { VideolistService } from "./videolist.service";
+import { MaterialModule } from '@angular/material';
+import { TitlePipe } from './title.pipe';
 
 const routes: Routes = [
    { path: 'video/:id', component: VideoplayerComponent },
@@ -18,13 +20,15 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     VideoplayerComponent,
-    VideolistComponent
+    VideolistComponent,
+    TitlePipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(routes, { useHash: false }) 
+    RouterModule.forRoot(routes, { useHash: false }),
+    MaterialModule.forRoot() 
   ],
   providers: [VideolistService],
   bootstrap: [AppComponent]

@@ -18,7 +18,7 @@ export class VideolistService {
 
         let params: URLSearchParams = new URLSearchParams();
         params.set("part", "snippet");
-        params.set("key", "SECRET_API_KEY");
+        params.set("key", "AIzaSyCbYlTxbziQ2lopXw-islKef8RhjFalsW4");
         params.set("q", search);
         params.set("type", "video");
 

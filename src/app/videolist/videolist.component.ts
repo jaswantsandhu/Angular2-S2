@@ -22,9 +22,10 @@ export class VideolistComponent implements OnInit {
   constructor( private videoservice : VideolistService  ) { }
 
   ngOnInit() {
-      this.searchQuery = "casey neistat";
+      this.searchQuery = "";
       this.videoservice.getVideos(this.searchQuery)
       .subscribe((videos) => {
+      console.log(videos)
           this.videolistArray = videos.items;
       });
   }

@@ -1,14 +1,17 @@
-<div class="row">
-  <div class="col-md-12">
-    <input (change)="search($event)" name="search" [value]="searchQuery" />
-  </div>
-</div>
+<md-toolbar>
+    <md-input-container class="example-full-width">
+        <input md-input placeholder="Search" (change)="search($event)" [value]="searchQuery">
+    </md-input-container>
+</md-toolbar>
 
-<div class="videoInfo" *ngFor="let video of videolistArray;">
-  <h3>
-    <a routerLink="/video/{{video.id.videoId}}">{{video.snippet.title}}</a>
-  </h3>
-  <p>{{video.snippet.description}}</p>
-  <hr/>
-</div>
-
+<md-card class="example-card" *ngFor="let video of videolistArray;">
+    <md-card-header>
+        <md-card-title> <a routerLink="/video/{{video.id.videoId}}">{{video.snippet.title | title}}</a>
+        </md-card-title>
+        <md-card-subtitle>{{video.snippet.channelTitle}}</md-card-subtitle>
+    </md-card-header>
+    <img md-card-image src="{{video.snippet.thumbnails.high.url}}">
+    <md-card-content>
+        <p>{{video.snippet.description}}</p>
+    </md-card-content>
+</md-card>
