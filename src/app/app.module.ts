@@ -13,7 +13,8 @@ import { MaterialModule } from '@angular/material';
 import { TitlePipe } from './title.pipe';
 
 const routes: Routes = [
-   { path: 'video/:id', component: VideoplayerComponent },
+        { path: '', component: VideolistComponent },
+        { path: 'video/:id', component: VideoplayerComponent },
 ];
 
 @NgModule({
