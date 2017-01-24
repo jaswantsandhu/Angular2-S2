@@ -13,6 +13,8 @@ export class VideolistComponent implements OnInit {
 
   search(event)
     {
+    
+        console.log( this.videoservice.getVideos(event.target.value), "Observable");
         this.videoservice.getVideos(event.target.value)
         .subscribe((videos) => {
             this.videolistArray = videos.items;
@@ -25,7 +27,7 @@ export class VideolistComponent implements OnInit {
       this.searchQuery = "";
       this.videoservice.getVideos(this.searchQuery)
       .subscribe((videos) => {
-      console.log(videos)
+          console.log(videos, "Data")
           this.videolistArray = videos.items;
       });
   }
